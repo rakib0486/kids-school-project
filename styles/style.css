@@ -23,13 +23,13 @@
 }
 
 /* Shared Styles */
-.c1-color1{
+.t-color{
     color: #202020;
 }
-.c1-color2{
+.d-color{
     color: #808080;
 }
-.c1-color3{
+.c1-color{
     color: #64C8FF;
 }
 .c2-color{
@@ -61,6 +61,18 @@
 }
 .grid{
     display: grid;
+}
+.c1s{
+    border: 1px solid #DEF5FF;
+    background: linear-gradient(to bottom, #DEF5FF, #ffffff 40%);
+}
+.c2s{
+    border: 1px solid #FFF4DC;
+    background: linear-gradient(to bottom, #FFF4DC, #ffffff 40%);
+}
+.c3s{
+    border: 1px solid #F2E8FF;
+    background: linear-gradient(to bottom, #F2E8FF, #ffffff 40%);
 }
 
 /* Nav Styles */
@@ -126,6 +138,64 @@ nav{
     padding: 10px 47px;
 }
 
+/* Main Styles */
+main{
+    max-width: 1330px;
+    margin: 0 auto;
+    /* background-image: ; */
+}
+
+/* Curriculum Section Styles */
+.section-title{
+    font-size: 2.9rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.card-container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 80px;
+}
+.card{
+    text-align: center;
+    padding: 58px 40px;
+    border-radius: 19px;
+    box-shadow: 0 0 28.3px 0.94px rgba(0, 0, 0, 0.05);
+}
+.card-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 33px 0;
+}
+.card-desc{
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 34px;
+    line-height: 28px;
+}
+.card a{
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+.card-btn{
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+.card-btn button{
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 /* Responsive for Mobile Devices */
 @media screen and (max-width: 576px) {
     .nav-links, .nav-title, .nav-btn{
@@ -141,5 +211,14 @@ nav{
     .banner{
         flex-direction: column-reverse;
         text-align: center;
+    }
+    .section-title{
+        margin-bottom: 20px;
+    }
+    .card-container{
+        grid-template-columns: 1fr;
+    }
+    .card-btn{
+        display: none;
     }
 }
