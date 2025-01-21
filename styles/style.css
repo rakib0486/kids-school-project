@@ -15,6 +15,13 @@
     font-style: normal;
 }
 
+/* Default Box Model Clear */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Shared Styles */
 .c1-color1{
     color: #202020;
@@ -47,10 +54,62 @@
     color: #ffffff;
     background-color: black;
     border-radius: 12px;
+    border: none;
 }
 .flex{
     display: flex;
 }
 .grid{
     display: grid;
+}
+
+/* Nav Styles */
+nav{
+    padding: 20px 141px;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo{
+    align-items: center;
+    gap: 11px;
+}
+.nav-title{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.links{
+    gap: 32px;
+}
+.nav-links .items{
+    list-style: none;
+}
+.items a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.nav-btn{
+    background-color: orange;
+    padding: 10px 60.5px;
+    font-weight: 600;
+}
+.menu-btn{
+    font-size: 2rem;
+    border: none;
+    background-color: #ffffff;
+    display: none;
+}
+
+/* Responsive for Mobile Devices */
+@media screen and (max-width: 576px) {
+    .nav-links, .nav-title, .nav-btn{
+        display: none;
+    }
+    nav{
+        padding: 12px 16px;
+        border: 1px solid rgba(254, 163, 1, 1);
+    }
+    .menu-btn{
+        display: block;
+    }
 }
