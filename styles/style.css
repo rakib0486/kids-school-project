@@ -77,15 +77,17 @@
 body{
     background-image: url(../assets/bg.png), linear-gradient(to top, rgba(254, 163, 1, 0.3), #ffffff 50%);
 }
+
+/* Header Styles */
 header{
     background-color: #ffffff;
+    max-width: 1330px;
+    margin: auto;
 }
 
 /* Nav Styles */
 nav{
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 20px 30px;
+    padding: 20px 0;
     justify-content: space-between;
     align-items: center;
 }
@@ -97,11 +99,13 @@ nav{
     font-size: 2rem;
     font-weight: 700;
 }
-.links{
-    gap: 32px;
-}
 .nav-links .items{
     list-style: none;
+    padding: 28px;
+}
+.nav-links .items:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
 }
 .items a{
     text-decoration: none;
@@ -113,6 +117,10 @@ nav{
     padding: 10px 60.5px;
     font-weight: 600;
 }
+.nav-btn:hover{
+    background-color: red;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 1);
+}
 .menu-btn{
     font-size: 2rem;
     border: none;
@@ -122,11 +130,9 @@ nav{
 
 /* Banner Styles */
 .banner{
-    max-width: 1330px;
-    margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 60px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 50px;
 }
@@ -144,6 +150,12 @@ nav{
 }
 .banner-btn{
     padding: 10px 47px;
+}
+.banner-btn:hover{
+    box-shadow: 0 0 25px -10px rgba(0, 0, 0, 1);
+    background-color: #ffffff;
+    color: #000000;
+    transform: skewX(-20);
 }
 
 /* Main Styles */
@@ -202,8 +214,15 @@ main{
     font-size: 1.5rem;
     font-weight: bold;
 }
+.card-btn button:hover{
+    background-color: black;
+    color: brown;
+}
 
 /* Stories Section Start */
+.stories{
+    padding-top: 60px;
+}
 .stories-container{
     grid-template-columns: 540.27px repeat(2, auto);
     gap: 18px;
@@ -250,6 +269,7 @@ main{
     font-weight: 800;
     line-height: 28px;
     color: #000000;
+    text-shadow: 0.5px 0 #000000;
     padding: 30px 54px 33px 38px;
 }
 .story-btn{
@@ -276,6 +296,12 @@ main{
     padding: 10px 61px;
     margin-bottom: 60px;
 }
+.stories-btn:hover{
+    box-shadow: 0 0 25px -10px rgba(0, 0, 0, 1);
+    background-color: #ffffff;
+    color: #000000;
+    transform: skewX(-20);
+}
 
 /* Footer Section Styles */
 footer{
@@ -291,14 +317,15 @@ footer{
 .footer-logo{
     align-items: center;
     gap: 10px;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
     margin-bottom: 35px;
 }
+.footer-title{
+    font-size: 2.65rem;
+    font-weight: 700;
+    color: #ffffff;
+}
 .footer-desc{
-    font-size: 1rem;
-    font-weight: 100;
+    font-size: 1.25rem;
     color: #ffffff;
 }
 .links-title{
@@ -312,13 +339,18 @@ footer{
     margin-left: 0;
 }
 .link-items a{
+    font-size: 1.25rem;
+    font-weight: 500;
     display: block;
     text-decoration: none;
     color: #ffffff;
     padding: 10px 0;
 }
+.link-items a:hover{
+    color: orangered;
+}
 .sites-title{
-    font-size: 1.6rem;
+    font-size: 1.65rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 32px;
@@ -329,6 +361,9 @@ footer{
 
 /* Responsive for Mobile Devices */
 @media screen and (max-width: 576px) {
+    body{
+        background-image: url(../assets/bg.png), linear-gradient(to top, rgba(254, 163, 1, 0.3), #ffffff 45%);
+    }
     .nav-links, .nav-title, .nav-btn{
         display: none;
     }
@@ -344,13 +379,21 @@ footer{
         text-align: center;
     }
     .banner-content{
+        text-align: center;
         padding: 20px 15px;
     }
-    .section-title{
-        margin-bottom: 20px;
+    .banner-desc{
+        font-weight: 500;
+    }
+    .curriculum .section-title{
+        margin-bottom: 30px;
+    }
+    .stories .section-title{
+        margin-bottom: 40px;
     }
     .card-container{
         grid-template-columns: 1fr;
+        padding: 0 16px;
     }
     .card-btn{
         display: none;
@@ -372,9 +415,23 @@ footer{
         gap: 32px;
     }
     footer{
-        padding-left: 21px;
+        padding: 66px 12px 60px 21px;
+    }
+    .footer-title{
+        font-size: 2.23rem;
     }
     .footer-desc{
         width: 520px;
+        font-size: 1rem;
+    }
+    .links-title{
+        font-size: 1.28rem;
+        font-weight: 600;
+    }
+    .link-items a{
+        font-size: 1.06rem;
+    }
+    .sites-title{
+        font-size: 1.40rem;
     }
 }
