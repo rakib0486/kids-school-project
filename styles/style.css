@@ -132,6 +132,7 @@ marquee{
     font-weight: bold;
     background-color: tomato;
     color: #000000;
+    padding: 5px 0;
 }
 
 /* Banner Styles */
@@ -221,8 +222,8 @@ main{
     font-weight: bold;
 }
 .card-btn button:hover{
-    background-color: black;
-    color: brown;
+    background-color: green;
+    color: #000000;
 }
 
 /* Stories Section Start */
@@ -379,6 +380,9 @@ footer{
     }
     .menu-btn{
         display: block;
+    }
+    marquee{
+        font-size: 1rem;
     }
     .banner{
         flex-direction: column-reverse;
