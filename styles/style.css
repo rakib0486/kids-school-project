@@ -277,6 +277,56 @@ main{
     margin-bottom: 60px;
 }
 
+/* Footer Section Styles */
+footer{
+    background-color: #000000c0;
+    padding: 123px 228px 174px 140px;
+}
+.footer-container{
+    justify-content: space-between;
+}
+.footer-content{
+    max-width: 400px;
+}
+.footer-logo{
+    align-items: center;
+    gap: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 35px;
+}
+.footer-desc{
+    font-size: 1rem;
+    font-weight: 100;
+    color: #ffffff;
+}
+.links-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 32px;
+}
+.link-items{
+    list-style: none;
+    margin-left: 0;
+}
+.link-items a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 0;
+}
+.sites-title{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 32px;
+}
+.sites-icons{
+    gap: 10px;
+}
+
 /* Responsive for Mobile Devices */
 @media screen and (max-width: 576px) {
     .nav-links, .nav-title, .nav-btn{
@@ -316,5 +366,15 @@ main{
     .story-btn{
         top: 140px;
         left: 38px;
+    }
+    .footer-container{
+        flex-direction: column;
+        gap: 32px;
+    }
+    footer{
+        padding-left: 21px;
+    }
+    .footer-desc{
+        width: 520px;
     }
 }
