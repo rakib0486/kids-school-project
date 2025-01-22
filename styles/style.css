@@ -118,7 +118,7 @@ nav{
     font-weight: 600;
 }
 .nav-btn:hover{
-    background-color: red;
+    background-color: green;
     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 1);
 }
 .menu-btn{
@@ -126,6 +126,12 @@ nav{
     border: none;
     background-color: #ffffff;
     display: none;
+}
+marquee{
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: tomato;
+    color: #000000;
 }
 
 /* Banner Styles */
