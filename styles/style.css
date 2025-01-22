@@ -74,10 +74,18 @@
     border: 1px solid #F2E8FF;
     background: linear-gradient(to bottom, #F2E8FF, #ffffff 40%);
 }
+body{
+    background-image: url(../assets/bg.png), linear-gradient(to top, rgba(254, 163, 1, 0.3), #ffffff 50%);
+}
+header{
+    background-color: #ffffff;
+}
 
 /* Nav Styles */
 nav{
-    padding: 20px 141px;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 20px 30px;
     justify-content: space-between;
     align-items: center;
 }
@@ -142,7 +150,6 @@ nav{
 main{
     max-width: 1330px;
     margin: 0 auto;
-    /* background-image: ; */
 }
 
 /* Curriculum Section Styles */
@@ -196,6 +203,80 @@ main{
     font-weight: bold;
 }
 
+/* Stories Section Start */
+.stories-container{
+    grid-template-columns: 540.27px repeat(2, auto);
+    gap: 18px;
+    margin-bottom: 80px;
+}
+#main-story{
+    grid-row: span 2;
+}
+#main-story .story-img img{
+    height: 110%;
+}
+#main-story .main-story-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 38px;
+    padding: 110px 99px 52px 38px;
+}
+#main-story .story-desc{
+    padding: 0 30px 10px 38px;
+    line-height: 28px;
+    color: #666666;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+.story{
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+.story-img{
+    height: auto;
+    position: relative;
+}
+#main-story .story-img{
+    height: 50%;
+}
+.story img{
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.story-title{
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 28px;
+    color: #000000;
+    padding: 30px 54px 33px 38px;
+}
+.story-btn{
+    position: absolute;
+    z-index: 1;
+    border-radius: 47.93px;
+    border: none;
+    padding: 10px 19px;
+    font-family: "Raleway", serif;
+    font-size: 0.95rem;
+    font-size: 500;
+    color: #ffffff;
+    top: 210px;
+    left: 38px;
+}
+#main-story .story-btn{
+    top: 385px;
+    left: 38px;
+    padding: 15px;
+}
+.stories-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 61px;
+    margin-bottom: 60px;
+}
+
 /* Responsive for Mobile Devices */
 @media screen and (max-width: 576px) {
     .nav-links, .nav-title, .nav-btn{
@@ -212,6 +293,9 @@ main{
         flex-direction: column-reverse;
         text-align: center;
     }
+    .banner-content{
+        padding: 20px 15px;
+    }
     .section-title{
         margin-bottom: 20px;
     }
@@ -220,5 +304,17 @@ main{
     }
     .card-btn{
         display: none;
+    }
+    #main-story{
+        display: none;
+    }
+    .stories-container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 16px;
+        margin-bottom: 20px;
+    }
+    .story-btn{
+        top: 140px;
+        left: 38px;
     }
 }
